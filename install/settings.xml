@@ -1,0 +1,33 @@
+<settings>
+    <!-- omitted xml -->
+    <profiles>
+        <profile>
+            <id>Repository Proxy</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>codingcorp-registry-maven-releases</id>
+                    <name>maven-releases</name>
+                    <!-- 需要填充：拉取 mvn 库的地址 -->
+                    <url>https://oldmvn.com/repository/registry/maven-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <servers>
+        <server>
+            <id>codingcorp-registry-maven-releases</id>
+            <!-- 需要填充：拉取需要的帐户密码 -->
+            <username>lusson</username>
+            <password></password>
+        </server>
+    </servers>
+</settings>

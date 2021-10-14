@@ -1,0 +1,12 @@
+<settings>
+    <!-- omitted xml -->
+    <servers>
+        <server>
+            <!--仓库 ID-->
+            <id>devops-registry-maven-release</id>
+            <!-- 需要填充：上传 mvn 库的账户和密码 -->
+            <username></username>
+            <password></password>
+        </server>
+    </servers>
+</settings>

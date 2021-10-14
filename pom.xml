@@ -1,0 +1,19 @@
+<project>
+    <!-- 必要属性 -->
+    <modelVersion>4.0.0</modelVersion>
+    <!-- 需要填充：需要迁移的 jar -->
+    <groupId>net.coding.common</groupId>
+    <artifactId>tracing</artifactId>
+    <version>5.0.3.trace.pro</version>
+
+    <!-- omitted xml -->
+    <distributionManagement>
+        <repository>
+            <!--必须与 settings.xml 的 id 一致-->
+            <id>devops-registry-maven-release</id>
+            <name>maven-release</name>
+            <!-- 需要填充：新的制品库 -->
+            <url>https://newmvn.com/repository/registry/maven-release/</url>
+        </repository>
+    </distributionManagement>
+</project>
