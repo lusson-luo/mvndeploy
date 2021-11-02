@@ -6,7 +6,6 @@ jar 迁移 mvn 库例子
 
 ### 文件目录
 
-pom.xml          ---     需要上传 jar 的配置
 settings.xml     ---     需要上传新 mvn 库
 install/pom.xml  ---     拉取的 jar 配置
 install/settings.xml     拉取的 mvn 库
@@ -24,11 +23,18 @@ mvn install -s settings.xml
 
 ### 推送
 
-将本地 jar 上传到新 mvn 库
-
-在当前目录下，修改 settings.xml 中的账户密码，用于新 mvn 库鉴权。
-
+将上传 jar 从 ~/.m2/xx/xx 拖动到当前文件夹下，执行
 ```
-mvn deploy -s settings.xml
+mvn deploy:deploy-file -DgroupId=net.coding.common \
+  -DartifactId=tracing \
+  -Dversion=5.0.3.trace.pro.beta \
+  -Dpackaging=jar \
+  -Dfile=tracing-5.0.3.trace.pro.jar \
+  -DrepositoryId=devops-registry-maven-release \
+  -Durl=https://devops-maven.pkg.codingcorp.net/repository/registry/maven-release \
+  -s settings.xml
 ```
-        
+
+参考：
+1. https://maven.apache.org/guides/mini/guide-3rd-party-jars-remote.html
+2. http://maven.apache.org/plugins/maven-deploy-plugin/deploy-file-mojo.html
