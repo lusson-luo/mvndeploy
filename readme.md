@@ -6,9 +6,9 @@ jar 迁移 mvn 库例子
 
 ### 文件目录
 
-settings.xml     ---     需要上传新 mvn 库
-install/pom.xml  ---     拉取的 jar 配置
-install/settings.xml     拉取的 mvn 库
+settings.xml     ---     需要上传新 mvn 库 \
+install/pom.xml  ---     拉取的 jar 配置 \
+install/settings.xml     拉取的 mvn 库 \
 
 ### 拉取
 
