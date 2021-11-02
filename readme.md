@@ -25,13 +25,13 @@ mvn install -s settings.xml
 
 将上传 jar 从 ~/.m2/xx/xx 拖动到当前文件夹下，执行
 ```
-mvn deploy:deploy-file -DgroupId=net.coding.common \
-  -DartifactId=tracing \
-  -Dversion=5.0.3.trace.pro.beta \
+mvn deploy:deploy-file -DgroupId=net.coding.common \ # jar 的 groupId
+  -DartifactId=tracing \ # jar 的 artifactId
+  -Dversion=5.0.3.trace.pro.beta \ # jar 的 version
   -Dpackaging=jar \
-  -Dfile=tracing-5.0.3.trace.pro.jar \
-  -DrepositoryId=devops-registry-maven-release \
-  -Durl=https://devops-maven.pkg.codingcorp.net/repository/registry/maven-release \
+  -Dfile=tracing-5.0.3.trace.pro.jar \ # jar 文件路径
+  -DrepositoryId=devops-registry-maven-release \ # setting 中的包含用户密码的远程库 id
+  -Durl=https://xx.net/repository/registry/maven-release \ # mvn 库地址
   -s settings.xml
 ```
 
